@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="text_primary">#1A1C1E</color>
+    <color name="text_secondary">#6C757D</color>
+    <color name="bg_light">#F8F9FA</color>
+
+    <color name="patient_icon_bg">#EBF2FF</color>
+    <color name="patient_icon_tint">#0D6EFD</color>
+
+    <color name="hospital_icon_bg">#F3E8FF</color>
+    <color name="hospital_icon_tint">#6F42C1</color>
+
+    <color name="admin_icon_bg">#FFF0F6</color>
+    <color name="admin_icon_tint">#D63384</color>
+</resources>

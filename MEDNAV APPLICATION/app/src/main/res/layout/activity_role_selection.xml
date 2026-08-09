@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_light">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/logoCard"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@android:drawable/stat_notify_voicemail"
+                app:tint="@color/patient_icon_tint" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Welcome to Smart\nLocator"
+            android:textColor="#0F172A"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logoCard" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="To get started, please tell us how you will be using the application."
+            android:textColor="#64748B"
+            android:textSize="17sp"
+            android:lineSpacingExtra="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
+
+        <!-- Patient Role -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPatient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#F1F5F9"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/patientIconBg"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:cardBackgroundColor="#F0F7FF"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="14dp"
+                        android:src="@android:drawable/ic_menu_myplaces"
+                        app:tint="#2563EB" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvPatientTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Patient"
+                    android:textColor="#1E293B"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/ivArrow1"
+                    app:layout_constraintStart_toEndOf="@id/patientIconBg"
+                    app:layout_constraintTop_toTopOf="@id/patientIconBg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Find hospitals and book\nappointments."
+                    android:textColor="#64748B"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/ivArrow1"
+                    app:layout_constraintStart_toStartOf="@id/tvPatientTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvPatientTitle" />
+
+                <ImageView
+                    android:id="@+id/ivArrow1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_media_play"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#CBD5E1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Hospital Role -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardHospital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#F1F5F9"
+            app:layout_constraintTop_toBottomOf="@id/cardPatient">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/hospitalIconBg"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:cardBackgroundColor="#F5F3FF"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="14dp"
+                        android:src="@android:drawable/ic_menu_day"
+                        app:tint="#7C3AED" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvHospitalTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Hospital Facility"
+                    android:textColor="#1E293B"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/ivArrow2"
+                    app:layout_constraintStart_toEndOf="@id/hospitalIconBg"
+                    app:layout_constraintTop_toTopOf="@id/hospitalIconBg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Manage your profile and\ncapacity."
+                    android:textColor="#64748B"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/ivArrow2"
+                    app:layout_constraintStart_toStartOf="@id/tvHospitalTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvHospitalTitle" />
+
+                <ImageView
+                    android:id="@+id/ivArrow2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_media_play"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#CBD5E1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Admin Role -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#F1F5F9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardHospital">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/adminIconBg"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:cardBackgroundColor="#FFF1F2"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="14dp"
+                        android:src="@android:drawable/stat_notify_voicemail"
+                        app:tint="#E11D48" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvAdminTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="System Admin"
+                    android:textColor="#1E293B"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/ivArrow3"
+                    app:layout_constraintStart_toEndOf="@id/adminIconBg"
+                    app:layout_constraintTop_toTopOf="@id/adminIconBg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Monitor platform and approvals."
+                    android:textColor="#64748B"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/ivArrow3"
+                    app:layout_constraintStart_toStartOf="@id/tvAdminTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvAdminTitle" />
+
+                <ImageView
+                    android:id="@+id/ivArrow3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_media_play"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#CBD5E1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
